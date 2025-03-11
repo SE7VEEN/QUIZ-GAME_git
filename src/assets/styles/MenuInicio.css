@@ -1,0 +1,34 @@
+.menu-inicio {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/src/images/campo.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .titulo {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+  }
+  
+  .boton-iniciar {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .boton-iniciar:hover {
+    background-color: #ffaa00;
+  }
+  

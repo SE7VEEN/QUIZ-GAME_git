@@ -1,0 +1,28 @@
+.panel-preguntas {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .opcion {
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .opcion:hover {
+    background-color: deepskyblue;
+  }
+  
+  .seleccionada {
+    background-color: lightgreen;
+  }
+  
