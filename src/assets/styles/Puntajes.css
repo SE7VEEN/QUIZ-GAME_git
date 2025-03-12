@@ -1,0 +1,38 @@
+/* Estilo del contenedor de puntajes */
+.puntajes-container {
+  text-align: center; /* Centra el texto */
+  margin-top: 20px; /* Margen superior  */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde  */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Color de fondo */
+  max-width: 300px; /* Ancho máximo */
+  margin-left: auto; /* Centra el contenedor horizontalmente */
+  margin-right: auto; 
+}
+
+
+.puntajes {
+  display: flex; /* Usa un contenedor flexible */
+  justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
+  margin-top: 10px; /* Margen superior */
+}
+
+/* Estilo de cada jugador */
+.jugador {
+  display: flex; /* Usa un contenedor flexible */
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+}
+
+/* Estilo del nombre del jugador */
+.jugador span:first-child {
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 5px; /* Margen inferior */
+}
+
+/* Estilo del puntaje del jugador */
+.jugador span:last-child {
+  font-size: 1.5em; /* Tamaño de la fuente */
+  color: #333; 
+}

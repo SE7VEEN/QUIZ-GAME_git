@@ -1,0 +1,39 @@
+/* Estilo General*/
+.boton-turno {
+  padding: 10px 20px; /* Espaciado interno del botón (10px arriba/abajo, 20px izquierda/derecha) */
+  font-size: 1em; /* Tamaño de la fuente */
+  color: #fff; /* Color del texto */
+  background-color: #007bff; /* Color de fondo */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+  margin: 5px; /* Margen exterior del botón (5px en todos los lados) */
+}
+
+/* Cuando está deshabilitado */
+.boton-turno:disabled {
+  background-color: #ccc; 
+  cursor: not-allowed; /* Cambia el cursor a "no permitido" cuando el botón está deshabilitado */
+}
+/* Cuando un jugador tiene el turno */
+.boton-turno.activo {
+  background-color: #28a745; 
+}
+
+/* Cuando esta activo y se pasa el cursor por encima */
+.boton-turno.activo:hover {
+  background-color: #218838; 
+}
+
+/* Cuando esta activo y se pasa el cursor por encima (excepto cuando está deshabilitado) */
+.boton-turno:hover:not(:disabled) {
+  background-color: #0056b3; 
+}
+
+/* Contenedor de los botones de turno */
+.botones-turno {
+  display: flex; /* Los alinea */
+  justify-content: center; /* Los centra */
+  margin-top: 20px; /* Los separa */
+}

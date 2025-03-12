@@ -1,0 +1,23 @@
+/* Estilo General */
+.caballo {
+  position: relative; /* No afecta a otros elementos */
+  margin: 10px 0; /* Margen superior e inferior de 10px */
+}
+
+
+.caballo-nombre {
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 5px; /* Margen inferior de 5px */
+  color: #333; /* Color del texto */
+}
+
+.caballo-progreso {
+  position: absolute; 
+  transition: transform 0.5s ease-in-out; /* Transición suave al mover el caballo */
+}
+
+
+.caballo-imagen {
+  width: 100px; /* Ancho */
+  height: auto; /* Alto: Mantiene la proporción de la imagen */
+}

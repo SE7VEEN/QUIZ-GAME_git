@@ -1,28 +1,31 @@
 .panel-preguntas {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .opciones {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .opcion {
-    padding: 10px;
-    font-size: 1.2rem;
-    background-color: lightblue;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .opcion:hover {
-    background-color: deepskyblue;
-  }
-  
-  .seleccionada {
-    background-color: lightgreen;
-  }
-  
+  text-align: center; /* Centra el texto */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Contenedor de opciones */
+.opciones {
+  display: flex; /* Usa un contenedor flexible */
+  flex-direction: column; /* Alinea los elementos en columna */
+  gap: 10px; /* Espacio entre los elementos */
+}
+
+/* Estilo de cada opción */
+.opcion {
+  padding: 10px; /* Espaciado interno */
+  font-size: 1.2rem; /* Tamaño de la fuente */
+  background-color: lightblue; /* Color de fondo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre la opción */
+  transition: 0.3s; /* Transición suave  */
+}
+
+/* Estilo de la opción al pasar el cursor */
+.opcion:hover {
+  background-color: deepskyblue; 
+}
+
+/* Estilo de la opción seleccionada */
+.seleccionada {
+  background-color: lightgreen; 
+}

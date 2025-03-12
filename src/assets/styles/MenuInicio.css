@@ -1,34 +1,37 @@
+
 .menu-inicio {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("/src/images/campo.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .titulo {
-    font-size: 2.5rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px;
-  }
-  
-  .boton-iniciar {
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    background-color: #ffcc00;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .boton-iniciar:hover {
-    background-color: #ffaa00;
-  }
-  
+  position: relative; /* Posición relativa para contener elementos internos */
+  width: 100vw; /* Ancho */
+  height: 100vh; /* Altura */
+  display: flex; /* Usa un contenedor flexible */
+  flex-direction: column; /* Alinea los elementos en columna */
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  background-image: url("/src/images/campo.jpg"); 
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+}
+
+
+.titulo {
+  font-size: 2.5rem; /* Tamaño de la fuente */
+  color: white; /* Color del texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+
+.boton-iniciar {
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 1.5rem; /* Tamaño de la fuente */
+  background-color: #ffcc00; /* Color de fondo */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  transition: background 0.3s; /* Transición suave del color de fondo */
+}
+
+
+.boton-iniciar:hover {
+  background-color: #ffaa00; /* Cambia el color de fondo al pasar el cursor */
+}
