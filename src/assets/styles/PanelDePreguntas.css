@@ -29,3 +29,21 @@
 .seleccionada {
   background-color: lightgreen; 
 }
+
+.panel-preguntas {
+  text-align: center;
+  margin: 20px;
+}
+
+.botones-puntajes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.botones-contenedor {
+  display: flex;
+  gap: 20px; /* Espacio entre los botones */
+  justify-content: center; /* Centrar los botones horizontalmente */
+}

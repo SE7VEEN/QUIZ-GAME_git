@@ -1,23 +1,25 @@
 /* Estilo General */
 .caballo {
-  position: relative; /* No afecta a otros elementos */
-  margin: 10px 0; /* Margen superior e inferior de 10px */
+  position: absolute; /* Posicionamiento dentro de la pista */
+  top: 50%; /* Centrado vertical */
+  transform: translateY(-50%); /* Ajuste para centrar */
+  left: 0; /* Comienza desde el extremo izquierdo de la pista */
+  transition: transform 0.5s ease-in-out; /* Transición suave al mover el caballo */
 }
-
 
 .caballo-nombre {
   font-weight: bold; /* Texto en negrita */
   margin-bottom: 5px; /* Margen inferior de 5px */
-  color: #333; /* Color del texto */
+  color: #fff; /* Color del texto */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Sombra para mejorar la legibilidad */
+  font-size: 1.2rem; /* Tamaño del texto */
 }
 
 .caballo-progreso {
-  position: absolute; 
-  transition: transform 0.5s ease-in-out; /* Transición suave al mover el caballo */
+  position: relative; /* Posicionamiento para el contenedor del caballo */
 }
 
-
 .caballo-imagen {
-  width: 100px; /* Ancho */
+  width: 80px; /* Ancho del caballo  */
   height: auto; /* Alto: Mantiene la proporción de la imagen */
 }

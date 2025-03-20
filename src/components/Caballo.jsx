@@ -6,7 +6,7 @@ const Caballo = ({ nombre, progreso, imagen }) => {
       <div className="caballo-nombre">{nombre}</div>
       <div
         className="caballo-progreso"
-        style={{ transform: `translateX(${progreso}%)` }} //Para mover el caballo horizontalmente segun el progreso
+        style={{ transform: `translateX(${progreso}%)` }} // Movemos el caballo horizontalmente
       >
         <img src={imagen} alt={nombre} className="caballo-imagen" />
       </div>

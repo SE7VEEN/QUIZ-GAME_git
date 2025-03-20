@@ -5,21 +5,23 @@ import metaImage from "/src/images/Meta.jpg";
 
 const Pista = ({ caballos }) => {
   return (
-    <div
-      className="pista"
-      style={{ backgroundImage: `url(${pistaImage})` }} // Usar la imagen de la pista
-    >
-      <div className="meta">
-        <img src={metaImage} alt="Meta" className="meta-imagen" />{" "}
-        {/* Usar la imagen de la meta */}
-      </div>
+    <div className="pista-container">
       {caballos.map((caballo, index) => (
-        <Caballo
+        <div
           key={index}
-          nombre={caballo.nombre}
-          progreso={caballo.progreso}
-          imagen={caballo.imagen}
-        />
+          className="pista"
+          style={{ backgroundImage: `url(${pistaImage})` }} // Imagen de fondo de la pista
+        >
+          <div className="meta">
+            <img src={metaImage} alt="Meta" className="meta-imagen" />{" "}
+            {/* Imagen de la meta */}
+          </div>
+          <Caballo
+            nombre={caballo.nombre}
+            progreso={caballo.progreso}
+            imagen={caballo.imagen}
+          />
+        </div>
       ))}
     </div>
   );

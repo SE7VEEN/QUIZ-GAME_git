@@ -1,50 +1,75 @@
-import React, { useState } from "react";
-import preguntas from "../data/preguntas";
+import React from "react";
+import BotonRojo from "./BotonRojo";
+import BotonPuntaje from "./BotonPuntaje";
+import BotonAyuda from "./BotonAyuda";
+import BotonCambiarPregunta from "./BotonCambiarPregunta";
+import CuadroEmergenteRespuesta from "./CuadroEmergenteRespuesta";
 import "../assets/styles/PanelDePreguntas.css";
 
+//Recimos las funciones y los estados necesarios
 const PanelDePreguntas = ({
-  indicePregunta,
-  onAnswerSelected, //Funcion que se ejecuta cuando el jugador selecciona una respuesta
-  turnoActual,
+  preguntaActual,
+  turno,
+  onPedirTurno,
+  onSumarPuntaje,
+  onMostrarRespuesta,
+  onCambiarPregunta,
+  mostrarRespuesta,
+  tiempoAgotado,
+  respuestaMostrada,
+  setMostrarRespuesta,
+  setRespuestaMostrada,
 }) => {
-  const [respuestaSeleccionada, setRespuestaSeleccionada] = useState(null); // Guardar la respuesta seleccionada por el jugador
+  if (!preguntaActual) {
+    return <div className="panel-preguntas">No hay pregunta disponible.</div>;
+  } //Si no hay preguntas disponible mostramos un mensaje
 
-  const preguntaActual = preguntas[indicePregunta];
+  const { pregunta, respuestaCorrecta } = preguntaActual; //Si la hay, extraemos la pregunta con su respuesta
 
-  const manejarRespuesta = (respuesta) => {
-    if (turnoActual === null) return; // Solo se ejcuta si un jugador solicitó un turno
-
-    setRespuestaSeleccionada(respuesta); //Se actualiza con la opcion del jugador
-
-    setTimeout(() => {
-      const esCorrecta = respuesta === preguntaActual.respuestaCorrecta;
-      onAnswerSelected(esCorrecta); // Notifica si la respuesta fue correcta o incorrecta
-      setRespuestaSeleccionada(null); // Reinicia la respuesta seleccionada
-    }, 1000);
-  };
+  //Los botones se deshabilitan dependiendo del estado del juego
+  const botonRojoDisabled =
+    turno !== null || tiempoAgotado || respuestaMostrada;
+  const botonAyudaDisabled = tiempoAgotado;
+  const botonPuntajeDisabled = turno !== "pendiente" || tiempoAgotado;
 
   return (
+    //Los botones principales son el botón rojo, el botón de ayuda y el botón para cambiar de pregunta
+    //Los botones de puntaje solo se muestran cuando un jugador ha pedido un turno, estan vinvulados al jugador correspondiente
     <div className="panel-preguntas">
-      <h2>{preguntaActual.pregunta}</h2>
-      <div className="opciones">
-        {preguntaActual.opciones.map(
-          (
-            opcion,
-            index //Renderiza un boton para cada opcion
-          ) => (
-            <button
-              key={index} //ID unico para cada boton
-              className={`opcion ${
-                respuestaSeleccionada === opcion ? "seleccionada" : ""
-              }`}
-              onClick={() => manejarRespuesta(opcion)}
-              disabled={respuestaSeleccionada !== null || turnoActual === null} // Deshabilita los botones si ya se seleccionó una respuesta o si no hay un jugador en turno
-            >
-              {opcion}
-            </button>
-          )
-        )}
+      <h2>{pregunta}</h2>
+
+      <div className="botones-contenedor">
+        <BotonRojo onClick={onPedirTurno} disabled={botonRojoDisabled} />
+        <BotonAyuda
+          onClick={onMostrarRespuesta}
+          disabled={botonAyudaDisabled}
+        />
+        <BotonCambiarPregunta onClick={onCambiarPregunta} />
       </div>
+      {turno === "pendiente" && (
+        <div className="botones-puntajes">
+          <BotonPuntaje
+            onClick={() => onSumarPuntaje("jugador1")}
+            jugador="Jugador 1"
+            disabled={botonPuntajeDisabled}
+          />
+          <BotonPuntaje
+            onClick={() => onSumarPuntaje("jugador2")}
+            jugador="Jugador 2"
+            disabled={botonPuntajeDisabled}
+          />
+        </div>
+      )}
+
+      {mostrarRespuesta && ( //
+        <CuadroEmergenteRespuesta
+          respuesta={respuestaCorrecta}
+          onClose={() => {
+            setMostrarRespuesta(false);
+            setRespuestaMostrada(true);
+          }}
+        />
+      )}
     </div>
   );
 };

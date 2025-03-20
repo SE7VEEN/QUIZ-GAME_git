@@ -1,25 +1,32 @@
-.pista {
-  position: relative; 
-  width: 100%; /* Ancho del contenedor */
-  height: 200px; /* Altura */
-  margin: 20px 0; /* Margen superior e inferior de 20px */
-  background-image: url("/src/images/Pista.jpg"); 
-  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
-  background-position: center; /* Centra la imagen de fondo */
-  border: 2px solid #000; 
+.pista-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre pistas */
+  width: 100%;
+  max-width: 800px; /* Ancho máximo del contenedor de pistas */
+  margin: 0 auto; /* Centrar el contenedor */
 }
 
+.pista {
+  position: relative;
+  width: 100%;
+  height: 100px; /* Altura de cada pista */
+  background-size: cover; /* Ajusta la imagen de fondo */
+  background-position: center; /* Centrar la imagen de fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Evitar que el caballo se salga de la pista */
+}
 
 .meta {
-  position: absolute; 
-  right: -25px; /* Coloca la meta 25px fuera del contenedor */
-  top: 50%; /* Coloca la meta en el 50% de la altura del contenedor */
-  transform: translateY(-50%); /* Centra verticalmente la meta */
+  position: absolute;
+  right: 0;
+  top: 16%;
+  transform: translateX(10%);
+  width: 100px; /* Ancho de la meta */
 }
 
-/* Estilo de la imagen de la meta */
 .meta-imagen {
-  width: 100px; /* Ancho */
-  height: 200px; /* Altura */
-  rotate: 180deg; /* Rota la imagen*/
+  width: 110%;
+  height: auto;
+  rotate: 90deg;
 }

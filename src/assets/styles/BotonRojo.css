@@ -1,0 +1,31 @@
+.boton-rojo {
+  width: 100px; /* Tamaño del botón */
+  height: 100px;
+  background-color: red; 
+  border-radius: 50%; /* Hace que sea redondo */
+  border: none; /* Sin borde */
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para efecto 3D */
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  color: #fff; /* Color del texto  */
+}
+
+/* Efecto al presionar el botón */
+.boton-rojo:active {
+  transform: scale(0.9); /* Efecto de presión */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Reduce la sombra al presionar */
+}
+
+/* Efecto al pasar el cursor */
+.boton-rojo:hover:not(:disabled) {
+  background-color: rgb(219, 4, 4); 
+}
+
+/* Cuando está deshabilitado */
+.boton-rojo:disabled {
+  background-color: #ccc; 
+  cursor: not-allowed; /* Cambia el cursor a "no permitido" */
+}
+
