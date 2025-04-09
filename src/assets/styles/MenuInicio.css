@@ -1,37 +1,228 @@
-
 .menu-inicio {
-  position: relative; /* Posición relativa para contener elementos internos */
-  width: 100vw; /* Ancho */
-  height: 100vh; /* Altura */
-  display: flex; /* Usa un contenedor flexible */
-  flex-direction: column; /* Alinea los elementos en columna */
-  justify-content: center; /* Centra los elementos verticalmente */
-  align-items: center; /* Centra los elementos horizontalmente */
-  background-image: url("/src/images/campo.jpg"); 
-  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
-  background-position: center; /* Centra la imagen de fondo */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/src/images/campo.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  overflow: auto;
 }
 
 
 .titulo {
-  font-size: 2.5rem; /* Tamaño de la fuente */
-  color: white; /* Color del texto */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto */
-  margin-bottom: 20px; /* Margen inferior */
+  font-size: 2.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #F2F2F2; 
+  text-shadow: 
+    2px 2px 4px rgba(15, 9, 9, 0.7),
+    0 0 10px rgba(139, 195, 74, 0.5); 
+  margin-bottom: 30px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  padding: 15px 30px;
+  border-radius: 12px;
+  background-color: #f2f2f25e; 
+  border: 1px solid rgba(226, 225, 214, 0.3); 
+  animation: float 3s ease-in-out infinite alternate;
 }
 
+
+.contenedor-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+  z-index: 1;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* =========== ESTILO BASE =========== */
+.boton-iniciar, 
+.boton-historial,
+.boton-instrucciones {
+  
+  padding: 14px 28px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(255, 255, 255, 0.1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  
+}
+
+/* =========== COLORES DE LOS BOTONES =========== */
 
 .boton-iniciar {
-  padding: 10px 20px; /* Espaciado interno */
-  font-size: 1.5rem; /* Tamaño de la fuente */
-  background-color: #ffcc00; /* Color de fondo */
-  border: none; /* Sin borde */
-  border-radius: 10px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
-  transition: background 0.3s; /* Transición suave del color de fondo */
+  background-color: #ffc107d2; 
+  color: #010D00; 
+}
+.boton-iniciar:hover {
+  background-color: #fdc92ff4;
+}
+/* =============================================== */
+.boton-instrucciones {
+  background-color: 	#f2edd0da;
+  color: #010D00; 
+}
+.boton-instrucciones:hover {
+  background-color: rgba(246, 240, 240, 0.95);
+}
+/* =============================================== */
+.boton-historial{
+  background-color: 	#590902e7;
+  color: #F2F2F2; 
+}
+.boton-historial:hover{
+  background-color: #782119ef;
+}
+/* =============================================== */
+
+
+/* =========== SOMBRA AL PASAR EL MOUSE =========== */
+.boton-historial:hover,
+.boton-iniciar:hover,
+.boton-instrucciones:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 
-.boton-iniciar:hover {
-  background-color: #ffaa00; /* Cambia el color de fondo al pasar el cursor */
+/* =========== ESTADO ACTIVO =========== */
+.boton-historial.activo{
+  background-color: 	#911004; 
+  color: #F2F2F2; 
+  border-color: #D32F2F;
+}
+
+.boton-instrucciones.activo {
+  background-color: #fffffff1; 
+  color: #010D00; 
+  border-color: #689F38;
+}
+
+
+.contenedor-historial,
+.contenedor-instrucciones {
+  width: 90%;
+  max-width: 600px;
+  max-height: 50vh;
+  overflow-y: auto;
+  background-color: #223943b3;
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 235, 59, 0.3); 
+  animation: fadeIn 0.5s ease;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+}
+
+ /* #022601b3;
+ #22433fb3; 
+ #223943b3*/
+
+
+.contenedor-instrucciones h3 {
+  color: #FFD54F; 
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.contenedor-instrucciones ol {
+  padding-left: 25px;
+  margin: 0;
+}
+
+.contenedor-instrucciones li {
+  color: #E8F5E9;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Barras de scroll personalizadas */
+.contenedor-historial::-webkit-scrollbar,
+.contenedor-instrucciones::-webkit-scrollbar {
+  width: 10px;
+}
+
+.contenedor-historial::-webkit-scrollbar-thumb,
+.contenedor-instrucciones::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 213, 79, 0.6); /* Amarillo */
+  border-radius: 5px;
+  border: 2px solid rgba(46, 125, 50, 0.7); /* Verde */
+}
+
+.contenedor-historial::-webkit-scrollbar-thumb:hover,
+.contenedor-instrucciones::-webkit-scrollbar-thumb:hover {
+  background-color: #FFC107; /* Amarillo más intenso */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.menu-inicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom, 
+    rgba(0, 0, 0, 0.2) 0%, 
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 0;
+}
+
+.menu-inicio > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
 }

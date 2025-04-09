@@ -1,32 +1,58 @@
 .pista-container {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Espacio entre pistas */
+  gap: 25px;
   width: 100%;
-  max-width: 800px; /* Ancho máximo del contenedor de pistas */
-  margin: 0 auto; /* Centrar el contenedor */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Esto evita que cualquier contenido sobresalga */
 }
 
 .pista {
   position: relative;
   width: 100%;
-  height: 100px; /* Altura de cada pista */
-  background-size: cover; /* Ajusta la imagen de fondo */
-  background-position: center; /* Centrar la imagen de fondo */
-  border-radius: 10px; /* Bordes redondeados */
-  overflow: hidden; /* Evitar que el caballo se salga de la pista */
+  height: 110px; /* Ligero aumento de altura */
+  background: linear-gradient(to right, #4a6b3a, #6b8c5a); /* Fondo degradado */
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra interior */
+  border: 3px solid #3a5a2a; /* Borde estilo pista */
+  transition: all 0.3s ease; /* Transición suave para efectos */
 }
+
+
+.pista:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
 
 .meta {
   position: absolute;
   right: 0;
-  top: 16%;
-  transform: translateX(10%);
-  width: 100px; /* Ancho de la meta */
+  top: 0;
+  height: 100%;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(30%);
 }
 
 .meta-imagen {
-  width: 110%;
+  width: 130%;
   height: auto;
-  rotate: 90deg;
+  transform: rotate(90deg);
+
 }
+
+

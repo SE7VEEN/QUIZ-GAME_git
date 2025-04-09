@@ -1,0 +1,62 @@
+.contenedor-resultados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #121212;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .titulo-ganador {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #f8d347;
+    text-shadow: 0 0 10px rgba(248, 211, 71, 0.5);
+  }
+  
+  .puntajes-finales {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .puntaje-jugador {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+  }
+  
+  .puntos {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  .botones-accion {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .boton-reiniciar{
+    background-color: #f8d347;
+    color: #121212;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+  }
+  
+  .boton-reiniciar:hover {
+    background-color: #ffdf5e;
+    transform: scale(1.05);
+  }
+  

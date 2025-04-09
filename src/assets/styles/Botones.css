@@ -1,0 +1,60 @@
+
+/* ================= BOTONES =============== */
+/* =========== ESTILOS GENERALES =========== */
+.boton{
+    width: 100px; /* Tamaño del botón */
+    height: 100px;
+    border-radius: 50%; /* Hace que sea redondo */
+    border: none; /* Sin borde */
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para efecto 3D */
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    color: #fff; /* Color del texto  */
+  }
+
+
+  /* =========== EFECTOS GENERALES  =========== */
+  
+  /* Efecto al presionar el botón */
+.boton:active{
+  transform: scale(0.9); /* Efecto de presión */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Reduce la sombra al presionar */
+}
+
+/* Cuando está deshabilitado */
+.boton:disabled {
+  background-color: #ccc; 
+  cursor: not-allowed; /* Cambia el cursor a "no permitido" */
+}
+/* =========================================== */
+
+
+/* =========== COLORES =========== */
+ /* Al pasar el cursor el color se oscurece */
+.boton-rojo {
+    background-color: rgba(255, 0, 0, 0.69); 
+}
+
+  .boton-rojo:hover:not(:disabled) {
+    background-color: rgb(219, 4, 4);
+  }
+/* =========================================== */
+
+.boton-ayuda {
+    background-color: #ffc107d3; 
+  }
+
+  .boton-ayuda:hover:not(:disabled) {
+    background-color: #e0a800; 
+  }
+ /* =========================================== */
+ .boton-cambiar {
+    background-color: #28a746b9; 
+  }
+  
+  .boton-cambiar:hover:not(:disabled) {
+    background-color: #218838; 
+  }
+    /* =========================================== */

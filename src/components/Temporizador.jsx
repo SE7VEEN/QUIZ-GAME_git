@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "../assets/styles/Temporizador.css";
 
 const Temporizador = ({ onTiempoAgotado, reset, pausado }) => {
-  const [tiempo, setTiempo] = useState(5); // Inicializamos el temporizador en 5
+  const [tiempo, setTiempo] = useState(10); // Inicializamos el temporizador en 5
 
   // Reiniciamos el temporizador cuando cambia 'reset'
   useEffect(() => {

@@ -1,0 +1,28 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.fondo {
+  background-image: url("/src/images/campo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  
+  /* Flexbox para centrar */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+}
+
+.contenido {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 30px;
+  
+  /*Ancho máximo para evitar que se estire demasiado */
+  max-width: 100%;
+  width: 90%; 
+}

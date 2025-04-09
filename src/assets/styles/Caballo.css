@@ -1,10 +1,12 @@
 /* Estilo General */
 .caballo {
   position: absolute; /* Posicionamiento dentro de la pista */
-  top: 50%; /* Centrado vertical */
-  transform: translateY(-50%); /* Ajuste para centrar */
-  left: 0; /* Comienza desde el extremo izquierdo de la pista */
-  transition: transform 0.5s ease-in-out; /* Transición suave al mover el caballo */
+  top: 0%; /* Centrado vertical */
+  left: 20px; /* Comienza desde el extremo izquierdo de la pista */
+  transition: all 2.5s cubic-bezier(0.22, 1, 0.36, 1); /* Transición más dinámica */
+}
+.caballo:hover {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
 }
 
 .caballo-nombre {
@@ -21,5 +23,7 @@
 
 .caballo-imagen {
   width: 80px; /* Ancho del caballo  */
-  height: auto; /* Alto: Mantiene la proporción de la imagen */
+  height: auto; /* Mantenemos la proporción de la imagen */
 }
+
+

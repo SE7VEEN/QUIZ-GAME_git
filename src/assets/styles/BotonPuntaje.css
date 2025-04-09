@@ -1,5 +1,5 @@
 .boton-puntaje {
-    background-color: blue;
+    background-color: rgba(47, 47, 219, 0.865);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -13,3 +13,5 @@
     background-color: #9999ff;
     cursor: not-allowed;
   }
+
+  
