@@ -132,10 +132,6 @@
   margin-top: 15px;
 }
 
- /* #022601b3;
- #22433fb3; 
- #223943b3*/
-
 
 .contenedor-instrucciones h3 {
   color: #FFD54F; 
@@ -167,14 +163,14 @@
 
 .contenedor-historial::-webkit-scrollbar-thumb,
 .contenedor-instrucciones::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 213, 79, 0.6); /* Amarillo */
+  background-color: rgba(255, 213, 79, 0.6); 
   border-radius: 5px;
-  border: 2px solid rgba(46, 125, 50, 0.7); /* Verde */
+  border: 2px solid rgba(46, 125, 50, 0.7);
 }
 
 .contenedor-historial::-webkit-scrollbar-thumb:hover,
 .contenedor-instrucciones::-webkit-scrollbar-thumb:hover {
-  background-color: #FFC107; /* Amarillo más intenso */
+  background-color: #FFC107; 
 }
 
 /* Animaciones */

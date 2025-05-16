@@ -7,13 +7,17 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-import MenuInicio from "./components/MenuInicio";
-import Juego from "./components/Juego";
-import ResultadosFinales from "./components/ResultadosFinales";
+import MenuInicio from "./components/menu/MenuInicio";
+import Juego from "./components/juego/Juego";
+import ResultadosFinales from "./components/resultados/ResultadosFinales";
+import { playSound } from "./components/musicaManager";
 
 //Este componente es el que se encarga de manejar la navegacion entre las diferentes vistas de la aplicacion
 //y de gestionar el estado del juego, como el inicio del juego, los resultados y el historial de partidas.
 
+/*Flujo principal:
+  1. Menú → 2. Juego → 3. Resultados → (volver a 1)
+*/
 function App() {
   const [juegoIniciado, setJuegoIniciado] = useState(false); //Indica si el juego esta iniciado
   //Guarda la informacion del ganador, los puntajes de cada jugador y la fecha de la partida
@@ -47,14 +51,10 @@ function App() {
     navigate("/juego");
   };
 
-  const reiniciarJuego = () => {
-    setJuegoIniciado(false);
-    navigate("/"); //Volvemos al menu de inicio
-  };
-
   // Función para establecer el ganador y actualizar el historial
   const setGanador = (resultado) => {
     // Actualizamos los resultados
+    playSound("endGame"); // Sonido al finalizar el juego
     setResultados(resultado);
 
     // Actualizamos el historial
@@ -87,7 +87,7 @@ function App() {
       />
       <Route
         path="/resultados"
-        //El componente ResultadosFinales recibe el ganador, los puntajes de cada jugador y las funciones para reiniciar el juego y volver al menu
+        //El componente ResultadosFinales recibe el ganador, los puntajes de cada jugador y la funcion para reiniciar el juego y volver al menu
         element={
           resultados.ganador ? (
             <ResultadosFinales
@@ -95,7 +95,6 @@ function App() {
               puntajeJugador1={resultados.puntajeJugador1}
               puntajeJugador2={resultados.puntajeJugador2}
               reiniciarJuego={iniciarJuego}
-              volverAlMenu={reiniciarJuego}
             />
           ) : (
             //Si no hay resultados o el juego no ha iniciado, redirigimos al usuario al menu de inicio

@@ -15,14 +15,14 @@
 .pista {
   position: relative;
   width: 100%;
-  height: 110px; /* Ligero aumento de altura */
+  height: 110px; 
   background: linear-gradient(to right, #4a6b3a, #6b8c5a); /* Fondo degradado */
   background-size: cover;
   background-position: center;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra interior */
-  border: 3px solid #3a5a2a; /* Borde estilo pista */
+  border: 3px solid #3a5a2a; 
   transition: all 0.3s ease; /* Transición suave para efectos */
 }
 

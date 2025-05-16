@@ -11,10 +11,9 @@ body, html {
   background-repeat: no-repeat;
   min-height: 100vh;
   
-  /* Flexbox para centrar */
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;     /* Centra verticalmente */
+  justify-content: center; 
+  align-items: center;     
 }
 
 .contenido {

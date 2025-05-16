@@ -1,12 +1,51 @@
-# React + Vite
+# 🏁 Juego de Preguntas - Carrera de Caballos 🐎
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un juego interactivo donde los jugadores compiten respondiendo preguntas para hacer avanzar sus caballos en la pista. El primero en llegar a la meta gana!
 
-Currently, two official plugins are available:
+## ✨ Características Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Sistema de turnos** con tiempo limitado para responder
+- **Banco de preguntas** aleatorias
+- **Visualización de progreso** con animación de caballos
+- **Temporizador visible** para mayor emoción
+- **Efectos de sonido** inmersivos
+- **Historial de partidas**
 
-## Expanding the ESLint configuration
+## 🛠 Tecnologías Utilizadas
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React + Vite** - Biblioteca principal
+- **React Router** - Navegación
+- **Howler.js** - Manejo de audio
+- **CSS Modules** - Estilos
+- **Vite** - Bundler y entorno de desarrollo
+
+## 🚀 Cómo Ejecutar el Proyecto
+
+1. **Clonar el repositorio**
+
+   ```bash
+   git clone https://github.com/SE7VEEN/QUIZ-GAME_git
+   cd QUIZ-GAME
+   ```
+
+2. **Verifica si las dependencias estan instaladas**
+
+```
+npm list react react-dom react-router-dom howler
+```
+
+3. **Si falta alguna instalala**
+
+```
+npm install react@latest react-dom@latest react-router-dom@latest howler@latest
+```
+
+4. **Comandos para ejecucion del proyecto**
+
+# Iniciar servidor de desarrollo
+
+npm run dev
+
+# Build para producción
+
+npm run build

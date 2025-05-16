@@ -1,31 +1,30 @@
-/* Estilo del título */
+
 .historial-container h2 {
   color: #f8d347;          
-  text-align: center;       /* Centrado */
-  margin-bottom: 20px;      /* Espacio inferior */
+  text-align: center;       
+  margin-bottom: 20px;      
 }
 
 /* Mensaje cuando no hay historial */
 .sin-historial {
-  text-align: center;       /* Texto centrado */
+  text-align: center;      
   color: #aaa;             
-  font-style: italic;       /* Cursiva */
+  font-style: italic;       
 }
 
-/* Lista de partidas */
 .lista-partidas {
-  list-style: none;         /* Sin viñetas */
-  padding: 0;               /* Sin padding */
+  list-style: none;         
+  padding: 0;               
 }
 
 /* Items individuales de partidas */
 .partida-item {
-  display: flex;            /* Diseño flexible */
-  justify-content: space-between; /* Espacio entre elementos */
-  padding: 10px;            /* Espaciado interno */
-  margin-bottom: 8px;       /* Separación entre items */
+  display: flex;            
+  justify-content: space-between; 
+  padding: 10px;            
+  margin-bottom: 8px;       
   background-color: #1a1d1a5e; /* Fondo ligeramente más claro */
-  border-radius: 5px;       /* Bordes redondeados */
+  border-radius: 5px;       
   transition: background-color 0.3s; /* Transición suave */
 }
 
@@ -37,34 +36,34 @@
 
 .fecha {
   color: #ffffff;             
-  font-size: 0.9rem;        /* Tamaño de fuente */
-  width: 40%;               /* Ancho */
+  font-size: 0.9rem;        
+  width: 40%;               
 }
 
 /* Estilo para el texto del ganador */
 .ganador {
   color: #ffffff;           
-  font-weight: bold;        /* Negrita */
-  width: 30%;               /* Ancho asignado */
-  text-align: center;       /* Centrado */
+  font-weight: bold;        
+  width: 30%;               
+  text-align: center;       
 }
 
 
 .puntajes {
   color: #cc96ff;           
-  width: 20%;               /* Ancho asignado */
-  text-align: right;        /* Alineado a la derecha */
+  width: 20%;              
+  text-align: right;        
 }
 
 
 .boton-limpiar {
   display: block;           /* Mostrar como bloque */
-  margin: 20px auto 0;      /* Margen superior y centrado */
-  padding: 8px 16px;        /* Espaciado interno */
+  margin: 20px auto 0;     
+  padding: 8px 16px;       
   background-color: #590902e7; 
   color: white;            
-  border: none;             /* Sin borde */
-  border-radius: 5px;       /* Bordes redondeados */
+  border: none;             
+  border-radius: 5px;       
   cursor: pointer;          /* Cursor tipo mano */
   transition: background-color 0.3s; /* Transición suave */
 }

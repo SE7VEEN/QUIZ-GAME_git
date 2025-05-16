@@ -1,9 +1,9 @@
 .notificacion-respuesta {
     position: fixed;
-    top: 20px; /* Posición en la parte superior */
-    left: 50%; /* Centrado horizontalmente */
-    transform: translateX(-50%); /* Ajuste para centrar */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1000; 
     background-color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
