@@ -1,3 +1,5 @@
+//Prueba Fer
+
 # 🏁 Juego de Preguntas - Carrera de Caballos 🐎
 
 Un juego interactivo donde los jugadores compiten respondiendo preguntas para hacer avanzar sus caballos en la pista. El primero en llegar a la meta gana!
